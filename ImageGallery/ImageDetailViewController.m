@@ -8,7 +8,10 @@
 
 #import "ImageDetailViewController.h"
 
-@interface ImageDetailViewController ()
+@interface ImageDetailViewController () <UIScrollViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UIImageView *imageView;
 
 @end
 
@@ -16,7 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    [self.scrollView sizeToFit];
+    self.imageView = [[UIImageView alloc] initWithImage: self.image];
+    [self.scrollView addSubview:self.imageView];
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.imageView sizeToFit];
+    self.imageView.center = CGPointMake(self.scrollView.center.x, self.scrollView.center.y);
+//    [self.imageView.centerXAnchor constraintEqualToAnchor: self.scrollView.topAnchor].active = YES;
+//    [self.imageView.centerYAnchor constraintEqualToAnchor: self.scrollView.bottomAnchor].active = YES;
+//    [self.imageView.leadingAnchor constraintEqualToAnchor: self.scrollView.leadingAnchor].active = YES;
+//    [self.imageView.trailingAnchor constraintEqualToAnchor: self.scrollView.trailingAnchor].active = YES;
+    self.scrollView.minimumZoomScale = 0.1;
+    self.scrollView.maximumZoomScale = 2.0;
+    self.scrollView.zoomScale = 0.4;
 }
 
 /*
@@ -28,5 +44,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) setupGestureRecognizer{
+    UIPinchGestureRecognizer *recog = [[UIPinchGestureRecognizer alloc]initWithTarget:self action: @selector(viewForZoomingInScrollView:)];
+    [self.view addGestureRecognizer:recog];
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return self.imageView;
+}
+
 
 @end

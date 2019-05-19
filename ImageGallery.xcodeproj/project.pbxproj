@@ -15,6 +15,7 @@
 		0D0A52102289E58E000AC878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A520F2289E58E000AC878 /* main.m */; };
 		0D0A521A2289E58E000AC878 /* ImageGalleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A52192289E58E000AC878 /* ImageGalleryTests.m */; };
 		0D0A52252289E58E000AC878 /* ImageGalleryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A52242289E58E000AC878 /* ImageGalleryUITests.m */; };
+		0D0A52342289F00C000AC878 /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A52332289F00C000AC878 /* ImageDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		0D0A52202289E58E000AC878 /* ImageGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0A52242289E58E000AC878 /* ImageGalleryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryUITests.m; sourceTree = "<group>"; };
 		0D0A52262289E58E000AC878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D0A52322289F00C000AC878 /* ImageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
+		0D0A52332289F00C000AC878 /* ImageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				0D0A52012289E58D000AC878 /* AppDelegate.m */,
 				0D0A52032289E58D000AC878 /* ViewController.h */,
 				0D0A52042289E58D000AC878 /* ViewController.m */,
+				0D0A52322289F00C000AC878 /* ImageDetailViewController.h */,
+				0D0A52332289F00C000AC878 /* ImageDetailViewController.m */,
 				0D0A52062289E58D000AC878 /* Main.storyboard */,
 				0D0A52092289E58E000AC878 /* Assets.xcassets */,
 				0D0A520B2289E58E000AC878 /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				0D0A52052289E58D000AC878 /* ViewController.m in Sources */,
 				0D0A52102289E58E000AC878 /* main.m in Sources */,
 				0D0A52022289E58D000AC878 /* AppDelegate.m in Sources */,
+				0D0A52342289F00C000AC878 /* ImageDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8CYLBGX24;
 				INFOPLIST_FILE = ImageGallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8CYLBGX24;
 				INFOPLIST_FILE = ImageGallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
